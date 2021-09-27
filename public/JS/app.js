@@ -11,7 +11,7 @@ weatherQuery.addEventListener('submit',(e)=>{
     e.preventDefault();
     message_1.textContent='Loading...'
     message_2.textContent=''
-    icon.src=undefined;
+    icon.src='';
     console.log(icon.src)
     const location = search.value
     //console.log(location);
