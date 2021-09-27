@@ -12,11 +12,16 @@ const forecast = (lat, long, callback) => {
             callback("Try different search", undefined);
         }
         else {
+
+               // console.log(body);
+
+
             callback(undefined, {location:body.location.name,
                                  region:body.location.region,
                                  tempInCel:body.current.temp_c,
                                  tempInFar:body.current.temp_f,
-                                 conditionText:body.current.condition.text});
+                                 conditionText:body.current.condition.text,
+                                icon:body.current.condition.icon});
         }
     }
     )

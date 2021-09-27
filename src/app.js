@@ -122,7 +122,7 @@ app.get('/weather', (req, res) => {
                         return res.send({error})
                     }
                     else{
-                        console.log(response);
+                        //console.log(response);
                         res.send(
                             response
                         )
