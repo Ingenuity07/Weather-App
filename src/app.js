@@ -10,9 +10,7 @@ const forecast = require('./utils/forecast')
 // path.join (takes to argument 1 path , 2nd field that needs to be edited in that path)
 // console.log(path.join(__dirname, '../public'))
 
-
-
-
+// it gives us to the whole drectoryt
 // #* DEFINE PATH FOR EXPRESS CONFIG
 const publicdirpath = path.join(__dirname, '../public');
 
@@ -21,6 +19,7 @@ const app = express();
 
 
 const port = process.env.PORT|| 3000;
+
 
 
 
@@ -38,7 +37,6 @@ app.set('view engine', 'hbs')
 
 
 // TO RENAME VIEWS FILE AND change its directory
-
 // #* DEFINE PATH FOR EXPRESS CONFIG
 const viewsPath = path.join(__dirname, '../templates/views')
 
@@ -82,7 +80,7 @@ app.get('', (req, res) => {
     // and can be used to dynamically allocate values in hbs file  
     res.render('index', {
         title: 'Weather app',
-        name: 'Shivam'
+        name: "Shivam Singh"
     });
     // express goes to view 
     // converts it into html and shows it 
@@ -91,14 +89,14 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About me',
-        name: "shivam"
+        name: "Shivam Singh"
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'This is help',
-        name: 'shivam'
+        name: "Shivam Singh"
     })
 })
 
@@ -122,7 +120,8 @@ app.get('/weather', (req, res) => {
                         return res.send({error})
                     }
                     else{
-                        //console.log(response);
+                       // console.log(response);
+
                         res.send(
                             response
                         )
@@ -152,7 +151,7 @@ app.get('/help/*',(req,res)=>{
     res.render('404',{
         title:'404 Page',
         errorMessage:'help article not found',
-        name:'Shivam'
+        name:'Shivam Singh'
     })
 })
 
@@ -170,7 +169,7 @@ app.get('*',(req,res)=>{
     res.render('404',{
         title:'404 Page',
         errorMessage:'Page not found',
-        name:'Shivam'
+        name:'Shivam Singh'
     })
 })
 
